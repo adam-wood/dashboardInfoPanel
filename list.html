@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=UTF-8>
+    <style>
+        body {
+            background-color: #16252E;
+            font-family: "Tahoma", Geneva, sans-serif;
+        }
+        
+        h1 {
+            color: #7ECDED;
+            font-family: "Georgia", serif;
+            font-size: 800%;
+            padding-left: 30px;
+        }
+        
+        p {
+            color: #769DEB;
+            font-size: 200%;
+            width: 50%;
+            padding-left: 200px;
+            margin-right: 500px;
+        }
+        
+        strong {
+            color:whitesmoke;
+        }
+        .headline {
+            color: #769DEB;
+            font-size: 400%;
+            padding-left: 200px;
+            margin-right: 500px;
+        }
+
+        .text {
+            color: #769DEB;
+            font-size: 200%;
+            width: 50%;
+            padding-left: 200px;
+            margin-right: 500px;
+        }
+
+        ul {
+            color: #769DEB;
+            font-size: 200%;
+            width: 50%;
+            padding-left: 260px;
+            margin-right: 500px;
+        }
+
+        ol {
+            color: #769DEB;
+            font-size: 200%;
+            width: 50%;
+            padding-left: 260px;
+            margin-right: 500px;
+        }
+
+        .source {
+            color: #7ECDED;
+            font-family: "Georgia", serif;
+            font-size: 300%;
+            width: 50%;
+            text-align: right;
+            padding-right: 30px;
+            font-style: italic;
+        }
+                
+        em {
+            color: #FFFFFF;
+            font-style: italic;
+        }
+        
+        .fix {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        .newsPicContainer
+        {
+            max-width: 30%;
+            max-height: 50%;
+            width: auto;
+            height: auto;
+            position: fixed;
+            top: 360px;
+            right: 30px;
+            /* border: dashed palevioletred 1px; */
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-bottom: 30px;
+            float: right;
+            overflow: auto;
+        }
+
+        .newsPicContainer img {
+            max-height:100%;
+            max-width: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>💡 Good to Know</h1>
+    <div id="quote"><p><em>loading...</em></p><p class="source"> - your IT team</p></div>
+    <!-- This references the 'list' of items you want to display -->
+    <script src="list.json"></script>
+    
+    <!-- This parses list.json and picks an item at random, then splits the elements and styles them -->
+    <!-- TODO: Find a better way of storing and presenting the items in the list, eg CSV would be easy to edit in Excel -->
+    <script>
+        (function() {
+            var quote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById("quote").innerHTML =
+            '<p class="headline">' + quote.headline +  '</p>'  +        
+            '<img src="' + quote.pic + '" class="newsPicContainer">' +  
+            '<p class="text">' + quote.text + '</p>' +
+            '<p class="source"> - ' + quote.source + '</p>';
+        })();
+    </script>
+    
+    <!-- Insert path to logo here -->
+    <img src="logo.png" class="fix">
+
+</body>
+</html>

@@ -1,6 +1,9 @@
 # dashboardInfoPanel
 A quick and dirty way to show rotating items (news/tips etc) in browser on a large screen.
 
+Reference-style: 
+![Screenshot][screenshot.png]
+
 # Instructions
 1. Download the files and open list.html
 2. Hit refresh a few times until the page contents change. (There is a function which randomly picks an item on page refresh)

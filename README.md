@@ -1,8 +1,7 @@
 # dashboardInfoPanel
-A quick and dirty way to show rotating items (news/tips etc) in browser on a large screen.
+A quick and dirty way to show a rotating list of items (news/tips etc) in browser on a large screen.
 
-Reference-style: 
-![Screenshot][screenshot.png]
+![Screenshot](https://github.com/adam-wood/dashboardInfoPanel/blob/master/screenshot.png?raw=true "Screenshot")
 
 # Instructions
 1. Download the files and open list.html

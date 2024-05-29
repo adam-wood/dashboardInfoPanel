@@ -108,19 +108,22 @@
 <body>
     <h1>💡 Good to Know</h1>
     <div id="quote"><p><em>loading...</em></p><p class="source"> - your IT team</p></div>
-    <!-- This references the 'list' of items you want to display -->
-    <script src="list.json"></script>
-    
+  
     <!-- This parses list.json and picks an item at random, then splits the elements and styles them -->
-    <!-- TODO: Find a better way of storing and presenting the items in the list, eg CSV would be easy to edit in Excel -->
     <script>
         (function() {
-            var quote = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById("quote").innerHTML =
-            '<p class="headline">' + quote.headline +  '</p>'  +        
-            '<img src="' + quote.pic + '" class="newsPicContainer">' +  
-            '<p class="text">' + quote.text + '</p>' +
-            '<p class="source"> - ' + quote.source + '</p>';
+            fetch('list.json')
+                .then(response => response.json())
+                .then(quotes => {
+                    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+                    document.getElementById("quote").innerHTML = `
+                        <p class="headline">${quote.headline}</p>
+                        <img src="${quote.pic}" class="newsPicContainer">
+                        <p class="text">${quote.text}</p>
+                        <p class="source"> - ${quote.source}</p>
+                    `;
+                })
+                .catch(error => console.error('Error loading JSON:', error));
         })();
     </script>
     

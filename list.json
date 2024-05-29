@@ -1,18 +1,14 @@
-var quotes = [
+[
     {
-        //Source: https://techcrunch.com/2018/12/25/cybersecurity-101-guide-password-manager/
-        headline: "Why you need to use a password manager 🔑",
-        text: "Password managers don’t just store your passwords — they help you generate and save <em>strong, unique passwords</em> when you sign up to new websites. <br><br>That means whenever you go to a website or app, you can pull up your password manager, copy your password, paste it into the login box, and you’re in. Often, password managers come with browser extensions that automatically fill in your password for you.",
-        source: "TechCrunch",
-        pic: "noun_password_2302780_F3F3F3.svg"
-        //Pic Source: https://thenounproject.com
+        "headline": "Why you need to use a password manager 🔑",
+        "text": "Password managers don’t just store your passwords — they help you generate and save <em>strong, unique passwords</em> when you sign up to new websites. <br><br>That means whenever you go to a website or app, you can pull up your password manager, copy your password, paste it into the login box, and you’re in. Often, password managers come with browser extensions that automatically fill in your password for you.",
+        "source": "TechCrunch",
+        "pic": "noun_password_2302780_F3F3F3.svg"
     },
     {
-        //Source: https://www.csoonline.com/article/3172711/5-ways-to-spot-a-phishing-email.html
-        headline: "5 ways to spot a phishing email",
-        text: "No one wants to believe they'd fall for a phishing scam. Yet 30 percent of phishing emails get opened. There are still a number of ways to identify phishing emails. Here are five of the most common elements to look for: <ol><li>Expect the unexpected</li><li>Name Check</li><li>Don't click on unrecognized links</li><li>Poor spelling and/or grammar</li><li>Are you threatening me?</li></ol> </p><p>Don't hesitate to call a company's customer service line, your HR department or IT department to confirm that any such emails are legitimate - it's better to be safe than sorry.",
-        source: "CSOonline.com",
-        pic: "noun_phishing_107343_F3F3F3.svg"
-        //Pic Source: https://thenounproject.com
+        "headline": "5 ways to spot a phishing email",
+        "text": "No one wants to believe they'd fall for a phishing scam. Yet 30 percent of phishing emails get opened. There are still a number of ways to identify phishing emails. Here are five of the most common elements to look for: <ol><li>Expect the unexpected</li><li>Name Check</li><li>Don't click on unrecognized links</li><li>Poor spelling and/or grammar</li><li>Are you threatening me?</li></ol> </p><p>Don't hesitate to call a company's customer service line, your HR department or IT department to confirm that any such emails are legitimate - it's better to be safe than sorry.",
+        "source": "CSOonline.com",
+        "pic": "noun_phishing_107343_F3F3F3.svg"
     }
-];
+]

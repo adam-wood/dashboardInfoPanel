@@ -108,8 +108,7 @@
       <p class="source">- your IT team</p>
     </div>
 
-    <!-- This parses list.json and picks an item at random, then splits the elements and styles them -->
-    <script>
+  <script>
       const DEBUG_MODE = false;
       const SEQUENTIAL_MODE = false;
 
@@ -122,9 +121,9 @@
         let i = 0;
         const quotesLength = quotes.length;
         const interval = setInterval(() => {
-            console.log(`Looping through quotes: ${i} of ${quotesLength}`);
+          console.log(`Looping through quotes: ${i} of ${quotesLength}`);
           displayQuote(quotes[i]);
-          (i = +1) % quotesLength;
+          i = (i + 1) % quotesLength;
           if (i === 0 && !DEBUG_MODE) {
             clearInterval(interval);
           }
@@ -135,7 +134,8 @@
         let i = 0;
         displayQuote(quotes[i]);
         document.addEventListener("click", () => {
-          (i += 1) % quotes.length;
+          i = (i + 1) % quotes.length;
+          console.log(`Sequencial looping. Index: ${i}`);
           displayQuote(quotes[i]);
         });
       }
@@ -150,6 +150,7 @@
       }
 
       (function () {
+        console.table({SEQUENTIAL_MODE, DEBUG_MODE});
         fetch("./list.json")
           .then((response) => response.json())
           .then((quotes) => {

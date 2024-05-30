@@ -15,6 +15,9 @@ A quick and dirty way to show a rotating list of items (news/tips etc) in browse
 - This can work great if used in conjunction with a browser extension that can rotate through tabs eg [Tab Rotate](https://chrome.google.com/webstore/detail/tab-rotate/pjgjpabbgnnoohijnillgbckikfkbjed?hl=en-GB)
 - You can have multiple lists in different tabs, just be sure to place them in different parent folders
 
+- # Troubleshooting
+- If you are not hosting on a server, but just on a file system you may have CORS errors. If so, please grab the files from [this earlier version](https://github.com/adam-wood/dashboardInfoPanel/tree/2f2f11019b0d25324823da9ddb1e7060fe0aa846)
+
 # ToDo
 - [ ] Find a better way to store and parse the list items so they are easy to update (eg CSV) 
 - [ ] Improve the function (~line 117) that splits the json items so it can handle line breaks, lists etc better
